@@ -50,7 +50,7 @@
     - **단순한 경우에는 패턴 적용을 지양** (Avoid applying patterns in simple cases)
     - **패턴 적용 시 코드 복잡도 증가를 고려** (Consider code complexity when applying patterns)
     - **패턴의 장단점을 충분히 검토 후 적용** (Apply patterns after thorough review of pros and cons)
-  - **자세한 예시 코드는 [patterns.md](./patterns.md) 파일 참조** (See [patterns.md](./patterns.md) file for detailed examples)
+  - **자세한 예시 코드는 [patterns.md](./docs/patterns.md) 파일 참조** (See [patterns.md](./docs/patterns.md) file for detailed examples)
 
 - **⚡ 함수 작성 (Function Writing)**
 
