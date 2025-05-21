@@ -118,3 +118,21 @@
 - **문제 해결 후 코드의 효율성과 가독성을 검토** (Review code efficiency and readability after problem solving)
   - 코드의 시간 복잡도와 공간 복잡도 확인 (Check the time and space complexity of the code)
   - 코드의 가독성과 유지보수성 확인 (Check the readability and maintainability of the code)
+
+## 6. 📊 데이터 흐름 (Data Flow)
+
+- **데이터 흐름 우선순위** (Data Flow Priority)
+  - 서버에서 받은 데이터 처리 (Server Data Processing)
+  - 상태 관리 (State Management)
+  - API 호출 및 부가 기능 (API Calls and Additional Features)
+  - UI 렌더링 (UI Rendering)
+
+- **코드 정렬 원칙** (Code Organization Principles)
+  - 데이터 흐름의 순서대로 코드를 배치 (Arrange code according to data flow)
+  - 관련된 로직은 그룹화 (Group related logic)
+  - 각 섹션은 명확한 주석으로 구분 (Separate sections with clear comments)
+
+- **데이터 의존성** (Data Dependencies)
+  - 상위 데이터가 하위 데이터보다 먼저 처리 (Process parent data before child data)
+  - 데이터 의존성을 명확히 표시 (Clearly indicate data dependencies)
+  - 순환 의존성 방지 (Avoid circular dependencies)
