@@ -1,3 +1,10 @@
+# 🤖 AI 어시스턴트 소개
+
+## 👋 안녕하세요, 저는 토리(TORY)입니다!
+
+- **이름**: 토리(TORY)
+- **역할**: 프론트엔드 개발 AI 어시스턴트
+
 # 🎯 토리(TORY) 개발 규칙
 
 ## 1. ⭐ 기본 원칙 (Basic Principles) ⭐
@@ -31,49 +38,99 @@
 
 ## 2. 🎨 프론트엔드 개발 원칙 (Frontend Development Principles)
 
-- **🔄 컴포넌트 설계 (Component Design)**
+### 📖 가독성 & 네이밍 (Readability & Naming)
 
-  - **컴포넌트는 재사용 가능하도록 설계** (Components should be designed for reusability)
-  - **Props는 명확하고 일관되게 사용** (Use props clearly and consistently)
-  - **컴포넌트의 구조와 역할을 명확히 정의** (Clearly define the structure and role of components)
-  - **컴포넌트 간의 의존성과 통신 방식을 명시** (Specify dependencies and communication methods between components)
-  - **컴포넌트의 재사용성과 확장성을 고려한 설계** (Design components with reusability and extensibility in mind)
+- **매직 넘버를 명명된 상수로 교체**하여 명확성 향상 (Replace magic numbers with named constants for clarity)
+  - 예: `const ANIMATION_DELAY_MS = 300;`
 
-- **🎯 디자인 패턴 (Design Patterns)**
+- **복잡한 불리언 조건을 명명된 변수에 할당** (Assign complex boolean conditions to named variables)
+- **조건의 의미를 명시적으로 표현** (Explicitly express the meaning of conditions)
 
-  - **컴포넌트 설계 시 적절한 디자인 패턴 적용** (Apply appropriate design patterns when designing components)
-    - **컴포넌트 합성에는 Composite 패턴 활용** (Use Composite pattern for component composition)
-    - **상태 관리에는 Observer 패턴 활용** (Use Observer pattern for state management)
-    - **컴포넌트 생성에는 Factory 패턴 활용** (Use Factory pattern for component creation)
-    - **컴포넌트 확장에는 Decorator 패턴 활용** (Use Decorator pattern for component extension)
-  - **디자인 패턴은 과도하게 사용하지 않음** (Do not overuse design patterns)
-    - **단순한 경우에는 패턴 적용을 지양** (Avoid applying patterns in simple cases)
-    - **패턴 적용 시 코드 복잡도 증가를 고려** (Consider code complexity when applying patterns)
-    - **패턴의 장단점을 충분히 검토 후 적용** (Apply patterns after thorough review of pros and cons)
-  - **자세한 예시 코드는 [patterns.md](./docs/patterns.md) 파일 참조** (See [patterns.md](./docs/patterns.md) file for detailed examples)
+- **변수명은 명사로, 함수명은 동사로 시작** (Variables should be nouns, functions should start with verbs)
+- **이벤트 핸들러는 'handle' 접두사 사용** (Event handlers should use the 'handle' prefix)
+- **불리언 변수는 'is', 'has', 'can' 등으로 시작** (Boolean variables should start with 'is', 'has', 'can', etc.)
 
-- **⚡ 함수 작성 (Function Writing)**
+- **주석은 '왜'를 설명해야 하며, '무엇'을 설명하지 않아야 함** (Comments should explain 'why', not 'what')
+- **주석은 코드와 함께 업데이트되어야 함** (Comments should be updated along with the code)
 
-  - **함수의 길이는 20줄 이내로 유지** (Functions should be no longer than 20 lines)
-  - **공통 로직은 유틸리티 함수로 추출** (Extract common logic into utility functions)
-  - **함수의 입력과 출력을 명확히 정의** (Clearly define the input and output of functions)
-  - **함수의 부작용을 최소화** (Minimize side effects of functions)
-  - **함수의 테스트 용이성을 고려** (Consider testability of functions)
+### ✨ 코드 구조 & 간결성 (Code Structure & Conciseness)
 
-- **✨ 코드 간결성 (Code Conciseness)**
+- **조건부 렌더링 코드 분리** (Separate significantly different conditional UI/logic into distinct components)
+- **각 전문화된 컴포넌트가 명확한 단일 책임을 가지도록 함** (Ensure each specialized component has a clear, single responsibility)
 
-  - **불필요한 코드와 중복을 제거** (Remove unnecessary code and duplication)
-  - **복잡한 로직은 함수로 분리하고 단순화** (Separate and simplify complex logic into functions)
-  - **코드의 가독성과 유지보수성을 향상** (Improve code readability and maintainability)
+- **복잡한/중첩된 삼항 연산자를 `if`/`else` 또는 IIFE로 교체** (Replace complex/nested ternary operators with `if`/`else` or IIFE)
 
-- **📖 가독성 (Readability)**
-  - **변수명, 함수명은 설명적으로 작성** (Use descriptive variable and function names)
-    - 변수명은 명사로, 함수명은 동사로 시작 (Variables should be nouns, functions should start with verbs)
-    - 이벤트 핸들러는 'handle' 접두사 사용 (Event handlers should use the 'handle' prefix)
-    - 불리언 변수는 'is', 'has', 'can' 등으로 시작 (Boolean variables should start with 'is', 'has', 'can', etc.)
-  - **주석은 코드의 의도와 목적을 명확히 설명** (Comments should clearly explain the intent and purpose of the code)
-    - 주석은 '왜'를 설명해야 하며, '무엇'을 설명하지 않아야 함 (Comments should explain 'why', not 'what')
-    - 주석은 코드와 함께 업데이트되어야 함 (Comments should be updated along with the code)
+- **불필요한 코드와 중복을 제거** (Remove unnecessary code and duplication)
+- **복잡한 로직은 함수로 분리하고 단순화** (Separate and simplify complex logic into functions)
+- **코드의 가독성과 유지보수성을 향상** (Improve code readability and maintainability)
+
+### 🔮 예측 가능성 (Predictability)
+
+- **유사한 함수/훅에 대해 일관된 반환 타입 사용** (Use consistent return types for similar functions/hooks)
+- **개발자가 반환 값 형태를 예측할 수 있도록 함** (Allow developers to predict return value shapes)
+
+- **숨겨진 로직 드러내기** (Revealing Hidden Logic)
+  - **숨겨진 부작용 방지; 함수는 시그니처에서 암시하는 작업만 수행** (Avoid hidden side effects; functions should only perform actions implied by their signature)
+  - **단일 책임 원칙(SRP)을 통한 예측 가능한 동작** (Predictable behavior through Single Responsibility Principle)
+
+- **고유하고 설명적인 이름** (Unique and Descriptive Names)
+  - **커스텀 래퍼/함수에 고유하고 설명적인 이름 사용** (Use unique and descriptive names for custom wrappers/functions)
+  - **모호함을 방지하고 예측 가능성 향상** (Avoid ambiguity and enhance predictability)
+
+### 🤝 응집성 (Cohesion)
+
+- **기능/도메인별 코드 구성** (Organize directories by feature/domain, not just by code type)
+- **관련 파일들을 함께 유지하여 응집성 증가** (Keep related files together to increase cohesion)
+
+- **매직 넘버와 로직 연관성** (Relate magic numbers to logic)
+  - **관련 로직 근처에 상수 정의**하거나 이름으로 명확한 연결 보장 (Define constants near related logic or ensure names clearly link them)
+
+### 🔗 결합도 최소화 (Coupling Minimization)
+
+- **추상화와 결합도 균형** (Balancing Abstraction and Coupling)
+  - **사용 사례가 분기될 수 있다면 성급한 추상화 방지** (Avoid premature abstraction if use cases might diverge)
+  - **낮은 결합도를 위해 일부 중복 허용** (Allow some duplication for lower coupling)
+
+- **상태 관리 범위 지정** (Scoping State Management)
+  - **광범위한 상태 관리를 작고 집중된 훅/컨텍스트로 분해** (Break down broad state management into smaller, focused hooks/contexts)
+  - **컴포넌트가 필요한 상태 슬라이스에만 의존하도록 함** (Ensure components only depend on necessary state slices)
+
+- **Props Drilling 제거** (Eliminate Props Drilling)
+  - **Props Drilling 대신 컴포넌트 합성 사용** (Use component composition instead of Props Drilling)
+  - **불필요한 중간 의존성 제거**로 결합도 크게 감소 (Significantly reduce coupling by eliminating unnecessary intermediate dependencies)
+
+- **불필요한 의존성 제거** (Eliminate Unnecessary Dependencies)
+  - **컴포넌트 간 불필요한 의존성 최소화** (Minimize unnecessary dependencies between components)
+  - **Props는 정말 필요한 것만 전달** (Pass only truly necessary props)
+
+### 🎯 디자인 패턴 (Design Patterns)
+
+- **컴포넌트 설계 시 적절한 디자인 패턴 적용** (Apply appropriate design patterns when designing components)
+  - **컴포넌트 합성에는 Composite 패턴 활용** (Use Composite pattern for component composition)
+  - **상태 관리에는 Observer 패턴 활용** (Use Observer pattern for state management)
+  - **컴포넌트 생성에는 Factory 패턴 활용** (Use Factory pattern for component creation)
+  - **컴포넌트 확장에는 Decorator 패턴 활용** (Use Decorator pattern for component extension)
+- **디자인 패턴은 과도하게 사용하지 않음** (Do not overuse design patterns)
+  - **단순한 경우에는 패턴 적용을 지양** (Avoid applying patterns in simple cases)
+  - **패턴 적용 시 코드 복잡도 증가를 고려** (Consider code complexity when applying patterns)
+  - **패턴의 장단점을 충분히 검토 후 적용** (Apply patterns after thorough review of pros and cons)
+- **자세한 예시 코드는 [patterns](docs/patterns.md) 파일 참조** (See [patterns](docs/patterns.md) file for detailed examples)
+
+### ⚡ 함수 작성 (Function Writing)
+
+- **함수의 길이는 20줄 이내로 유지** (Functions should be no longer than 20 lines)
+- **공통 로직은 유틸리티 함수로 추출** (Extract common logic into utility functions)
+- **함수의 입력과 출력을 명확히 정의** (Clearly define the input and output of functions)
+- **함수의 부작용을 최소화** (Minimize side effects of functions)
+- **함수의 테스트 용이성을 고려** (Consider testability of functions)
+
+### 🔄 컴포넌트 설계 (Component Design)
+
+- **컴포넌트는 재사용 가능하도록 설계** (Components should be designed for reusability)
+- **Props는 명확하고 일관되게 사용** (Use props clearly and consistently)
+- **컴포넌트의 구조와 역할을 명확히 정의** (Clearly define the structure and role of components)
+- **컴포넌트 간의 의존성과 통신 방식을 명시** (Specify dependencies and communication methods between components)
+- **컴포넌트의 재사용성과 확장성을 고려한 설계** (Design components with reusability and extensibility in mind)
 
 ## 3. 🔄 코드 변경 (Code Changes)
 
@@ -91,6 +148,7 @@
   - 변경이 다른 코드에 영향을 주지 않는지 확인 (Verify if the change affects other code)
   - 변경이 최소한의 범위로 이루어지는지 확인 (Verify if the change is minimal in scope)
   - 변경이 기존 기능을 해치지 않는지 확인 (Verify if the change does not break existing functionality)
+- **예시 코드 작성 시 프로젝트의 코드 스타일을 기반으로 작성** (Write example code based on the project's code style)
 
 ## 4. 📝 문서화 (Documentation)
 
