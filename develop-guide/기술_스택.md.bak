@@ -1,0 +1,119 @@
+프로젝트의 패키지 파일들을 읽어서 실제 버전을 확인하겠습니다.실제 패키지 버전을 반영한 **기술_스택.md** 업데이트:
+
+# 🛠️ Fallingo 프로젝트 기술 스택
+
+## 📍 개요
+- **프로젝트명**: Fallingo (폴링고)
+- **버전**: 0.1.0
+- **타입**: 모바일 앱 (iOS/Android)
+- **개발 방식**: 로컬 MVP → 클라우드 운영
+
+## 🔧 기술 스택
+
+### Frontend
+| 기술 | 버전 | 용도 |
+|------|------|------|
+| Flutter | SDK >=3.0.0 <4.0.0 | 크로스 플랫폼 앱 개발 |
+| Dart | SDK >=3.0.0 | 프로그래밍 언어 |
+| Riverpod | 2.4.0 | 상태 관리 |
+| Material Design | 3 | UI 디자인 시스템 |
+
+### Backend
+| 기술 | 버전 | 용도 |
+|------|------|------|
+| Python | 3.13 | 프로그래밍 언어 |
+| Flask | 3.0.0 | 웹 프레임워크 |
+| Gunicorn | 21.2.0 | WSGI 서버 |
+
+### Database & Services
+| 기술 | 버전 | 용도 |
+|------|------|------|
+| PostgreSQL | 15+ | 관계형 데이터베이스 |
+| PostGIS | Latest | 지리공간 데이터 처리 |
+| Supabase | 2.4.0 | BaaS (인증, 저장소, 실시간) |
+
+### External APIs
+| 서비스 | 용도 |
+|--------|------|
+| Google Maps Platform | 지도 표시 및 위치 검색 |
+| Google Cloud Vision | OCR 및 이미지 인식 |
+| Open-Meteo | 날씨 정보 |
+
+## 📦 주요 패키지
+
+### Flutter Dependencies
+```yaml
+# Core
+supabase_flutter: ^2.0.0
+flutter_riverpod: ^2.4.0
+go_router: ^13.0.0
+
+# Maps & Location
+google_maps_flutter: ^2.5.0
+geolocator: ^10.1.0
+geocoding: ^2.1.1
+
+# Camera & Image
+camera: ^0.10.5
+image_picker: ^1.0.4
+flutter_image_compress: ^2.1.0
+
+# UI
+cached_network_image: ^3.3.0
+shimmer: ^3.0.0
+flutter_slidable: ^3.0.1
+lottie: ^2.7.0
+
+# Auth
+google_sign_in: ^6.1.5
+sign_in_with_apple: ^5.0.0
+
+# Network
+http: ^1.1.0
+dio: ^5.4.0
+
+# Storage
+shared_preferences: ^2.2.2
+flutter_secure_storage: ^9.0.0
+
+# Utils
+intl: 0.20.2
+permission_handler: ^11.1.0
+uuid: ^4.2.1
+```
+
+### Python Requirements
+```txt
+# Framework
+Flask==3.0.0
+Flask-Cors==4.0.0
+
+# Supabase
+supabase==2.4.0
+gotrue==2.9.1
+postgrest==0.16.11
+realtime==1.0.6
+storage3==0.7.7
+
+# External APIs
+google-cloud-vision==3.8.1
+googlemaps==4.10.0
+
+# Utils
+python-dotenv==1.0.0
+Pillow==11.2.1
+requests==2.31.0
+
+# Development
+black==25.1.0
+flake8==7.2.0
+isort==6.0.1
+
+# Production
+gunicorn==21.2.0
+```
+
+## 🚀 향후 전환 계획
+- **Backend**: Flask → Supabase Edge Functions (Deno)
+- **CDN**: Supabase Storage → CloudFlare CDN
+- **Platform**: Mobile → Mobile + Web
