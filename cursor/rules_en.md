@@ -1,4 +1,4 @@
-# 🚀 TORY AI Ultimate Development Guide (Master Ver. 3.0)
+# 🚀 TORY AI Development Guide
 
 **This document defines all thoughts and actions of the AI assistant TORY.**
 From development philosophy to execution rules, all principles that AI can immediately apply are contained here.
